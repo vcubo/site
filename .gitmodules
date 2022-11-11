@@ -1,0 +1,4 @@
+[submodule "deploy/public"]
+	path = deploy/public
+	url = https://github.com/vcubo/vcubo.co.git
+	branch = main

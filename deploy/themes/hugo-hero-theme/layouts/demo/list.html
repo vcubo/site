@@ -1,0 +1,29 @@
+{{ define "header_css" }}{{ end }}
+{{ define "body_classes" }}page-work-list{{ end }}
+{{ define "header_classes" }}{{ end }}
+
+{{ define "main" }}
+
+{{ partial "hero-image-setheight.html" (dict "background" .Params.heroBackground "heading" .Params.heroHeading "subheading" .Params.heroSubHeading "content" .)}}
+{{ if .Content }}
+{{ if .Params.plotly }}
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+{{ end }}
+<div class="container pt-0 pt-md-">
+  <div class="row">
+    <div class="col-12">
+      <div class="page-intro">
+        <div class="container pb-5 pt-5 pb-md-5 pt-md-5">
+          {{ .Content }}
+        </div>
+        <a class="button" href="{{ .Params.buttonLink | relURL }}">{{ .Params.button }}</a>
+    </div>
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<div class="container pb-2 pt-2 pb-md-10 pt-md-10">
+
+</div>
+{{ end }}

@@ -1,0 +1,62 @@
+baseURL = "http://vcubo.co/"
+languageCode = "en-us"
+title = "vcubo"
+theme = "hugo-hero-theme"
+
+
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.55.0"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  google_analytics_id="G-3VPNCCCKS4"
+
+  [params.homepage_meta_tags]
+    meta_description = "Quantitative Risk Analysis based on historical data."
+    meta_og_title = "vcubo beta"
+    meta_og_type = "website"
+    meta_og_url = ""
+    meta_og_image = ""
+    meta_og_description = "Quantitative Risk Analysis based on historical data."
+    meta_twitter_card = "summary"
+    meta_twitter_site = ""
+    meta_twitter_creator = ""
+
+[[menu.main]]
+    name = "Demo"
+    url = "/demo/"
+    weight = 1
+
+
+[[menu.main]]
+  name = "Our work"
+  url = "/services/"
+  weight = 2
+
+
+[[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+
+
+#[[menu.main]]
+#    name = "Analytics"
+#    url = "/history/"
+#    weight = 2
+
+[[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[permalinks]
+  post = "/:year/:month/:day/:slug/"
+  pages = "/:filename/"
